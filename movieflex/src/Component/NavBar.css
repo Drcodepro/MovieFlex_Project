@@ -1,12 +1,6 @@
 
 #navbar{
-    background-color: rgb(94, 195, 223);
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  
 }
 
 #flexName{
