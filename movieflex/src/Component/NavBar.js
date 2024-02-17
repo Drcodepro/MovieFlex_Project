@@ -1,6 +1,4 @@
 import "./NavBar.css"
-import React  from "react"
-import { cartCount } from "./MultipleCards"
 import styled, { keyframes } from "styled-components"
 
 // here we are using "styled-components"  to style elements in react 
@@ -16,37 +14,31 @@ align-items: center;
 padding-left: 20px;
 padding-right: 20px;`
 
-
-let BtnAnim = keyframes`
-0% { background-color:yellow }
-100% { background-color:red }
-`
-let Btn = styled.button`
-width: 70px;
+let IMG = styled.img`
+width: 35px;
 height: 35px;
 text-align: center;
-font-weight: 800;
-font-size: 15px;
-border-radius: 5px;
-border: solid black 1px;
-background-color:yellow;
-animation-name: ${BtnAnim};   
-animation-duration: 4s;
-animation-iteration-count: infinite;
-animation-direction:alternate;
-animation-timing-function:linear;
+`
+let Count=styled.span`
+width:17px;
+height:17px;
+text-align:center;
+position:absolute;
+right:25px;
+font-weight:900;
+font-size:15px;
+border-radius:50%;
+background-color:rgb(72, 255, 0);
 `
 
-
- class NavBar extends React.Component{
-    render(){
-        return(<Nav>
+function NavBar(props){
+        return(
+        <Nav>
         <h1 id="flexName">Movie Flex</h1>
-
-        <Btn>Cart {cartCount}</Btn>
-
+        <div> <IMG src="https://cdn-icons-png.flaticon.com/128/891/891462.png"/>
+        <Count>{props.cartCount}</Count></div>
+       
         </Nav>)
     }
-}
 
 export default NavBar;
